@@ -30,15 +30,10 @@ package: HIT ENTER
 Y: HIT ENTER
 ```
 
-You will now have a spark-challenge project folder. Exit VS Code.
 
 ## Instructions 3 - Code the project
 
 Change directory into your new spark-challenge folder. Right-click and open your spark-challenge folder in VS Code.
-
-Add a basic README.md. Use it to store your notes and commands.
-
-When VS Code asks: "A build file was modified. Do you want to synchronize the Java classpath/configuration?" Answer "Always" to allow VS Code to generate these artifacts automatically.
 
 ## Instructions 4 - Add to POM.xml
 
@@ -82,7 +77,6 @@ import org.apache.commons.io.FileUtils;
 
 ## Challenges - create a process method
 
-Create a new private static void process method that takes one argment, a String containting the fileName (provided in the args).
 
 ```Java
 
@@ -120,18 +114,6 @@ Create a new private static void process method that takes one argment, a String
     Path path = FileSystems.getDefault().getPath(outputFolder);
     FileUtils.deleteQuietly(path.toFile());
     output.saveAsTextFile("outputFolder");
-
-    // get the path to your outputFolder
-   
-
-    // use FileUtils to delete them quietly
-    // It does not work.
-    // google and find the import statement required. Add it to this file.
-  
-
-    // use call saveAsTextFile on your output JavaPairRDD to save your results.
-    // Pass in the variable holding your simple string
-   
 
     // close your spark context
      sparkContext.close();
